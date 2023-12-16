@@ -13,6 +13,7 @@
 		4581040B2B2DFC7A00F5EFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4581040A2B2DFC7A00F5EFC9 /* Assets.xcassets */; };
 		4581040E2B2DFC7A00F5EFC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4581040C2B2DFC7A00F5EFC9 /* LaunchScreen.storyboard */; };
 		458104162B2DFFFF00F5EFC9 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458104152B2DFFFF00F5EFC9 /* ContactListViewController.swift */; };
+		45F2B1FA2B2E196F00E06AB4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2B1F92B2E196F00E06AB4 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4581040D2B2DFC7A00F5EFC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4581040F2B2DFC7A00F5EFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		458104152B2DFFFF00F5EFC9 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		45F2B1F92B2E196F00E06AB4 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				458104012B2DFC7900F5EFC9 /* AppDelegate.swift */,
 				458104032B2DFC7900F5EFC9 /* SceneDelegate.swift */,
 				458104152B2DFFFF00F5EFC9 /* ContactListViewController.swift */,
+				45F2B1F92B2E196F00E06AB4 /* Person.swift */,
 				458104072B2DFC7900F5EFC9 /* Main.storyboard */,
 				4581040A2B2DFC7A00F5EFC9 /* Assets.xcassets */,
 				4581040C2B2DFC7A00F5EFC9 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				458104022B2DFC7900F5EFC9 /* AppDelegate.swift in Sources */,
 				458104042B2DFC7900F5EFC9 /* SceneDelegate.swift in Sources */,
+				45F2B1FA2B2E196F00E06AB4 /* Person.swift in Sources */,
 				458104162B2DFFFF00F5EFC9 /* ContactListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
