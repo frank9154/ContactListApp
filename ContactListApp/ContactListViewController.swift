@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ContactListViewController: UITableViewController  {
+final class ContactListViewController: UITableViewController {
 
     
     //@IBOutlet weak var tableView: UITableViewCell!
@@ -20,8 +20,10 @@ final class ContactListViewController: UITableViewController  {
         var people = [Person]()
         let dataStore = DataStore()
         
+        /*
         tableView.delegate = self
         tableView.dataSource = self
+         */
         
         for _ in 1...20 {
             let randomPerson = dataStore.generateRandomPerson()
@@ -118,14 +120,14 @@ final class ContactListViewController: UITableViewController  {
          }
          */
         
-        /*
-         // MARK: - Navigation
-         
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-         }
-         */
+        
+         //MARK: - Navigation
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "showDetailSegue" {
+                if let indexPath = tableView.indexPathForSelectedRow, let detailViewController = segue.destination as? DetailViewController {
+                    let selectedPerson = people[indexPath.row]
+                    detailViewController.person = selectedPerson
+                }
+            }
     }
 }
