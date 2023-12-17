@@ -42,7 +42,7 @@ final class ContactListViewController: UITableViewController {
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath)
             let person = people[indexPath.row]
             cell.textLabel?.text = person.fullName
             return cell
@@ -121,13 +121,16 @@ final class ContactListViewController: UITableViewController {
          */
         
         
-         //MARK: - Navigation
+        //MARK: - Navigation
         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "showDetailSegue" {
-                if let indexPath = tableView.indexPathForSelectedRow, let detailViewController = segue.destination as? DetailViewController {
-                    let selectedPerson = people[indexPath.row]
-                    detailViewController.person = selectedPerson
+            //if segue.identifier == "showDetailSegue" {
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let detailViewController = segue.destination as? DetailViewController
+                    //let selectedPerson = people[indexPath.row]
+                    detailViewController?.person = people[indexPath.row]
                 }
             }
+        
+
     }
-}
+

@@ -17,12 +17,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell" id="sAX-t3-G7F">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell" textLabel="nS7-5P-XsD" style="IBUITableViewCellStyleDefault" id="sAX-t3-G7F">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sAX-t3-G7F" id="szP-aB-nMo">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nS7-5P-XsD">
+                                            <rect key="frame" x="20" y="0.0" width="353" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="DOp-va-jme" kind="show" identifier="showDetailSegue" id="1ou-Bi-LqP"/>
@@ -71,7 +80,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vbh-FP-Cel">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vbh-FP-Cel">
                                 <rect key="frame" x="85" y="223" width="48" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zA1-eA-wjO">
@@ -87,9 +96,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="DD0-wy-7Sd" firstAttribute="leading" secondItem="vbh-FP-Cel" secondAttribute="leading" constant="16" id="er2-Pm-ob1"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2it-JI-eTa"/>
@@ -101,6 +107,8 @@
                             <constraint firstItem="O9c-Bs-k2c" firstAttribute="top" secondItem="2it-JI-eTa" secondAttribute="top" constant="16" id="TTN-5D-7xe"/>
                             <constraint firstItem="BTL-xc-HPb" firstAttribute="leading" secondItem="2it-JI-eTa" secondAttribute="leading" constant="16" id="cPn-sE-HKu"/>
                             <constraint firstItem="O9c-Bs-k2c" firstAttribute="leading" secondItem="2it-JI-eTa" secondAttribute="leading" constant="16" id="jga-ss-h8a"/>
+                            <constraint firstItem="vbh-FP-Cel" firstAttribute="leading" secondItem="BTL-xc-HPb" secondAttribute="trailing" constant="8" id="mg6-1H-sC8"/>
+                            <constraint firstItem="2it-JI-eTa" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="O9c-Bs-k2c" secondAttribute="trailing" symbolic="YES" id="st8-vp-sJf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Contact Info" id="c5B-df-Z4f"/>
